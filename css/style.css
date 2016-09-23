@@ -1,0 +1,141 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/**** Font ****/
+
+p {
+    font-family: MyriadProRegular;
+    font-size: 11.9pt;
+}
+
+h1, h2, h3 {
+    font-family: MyriadProBold;
+    text-transform: uppercase;
+}
+
+b {
+    font-family: MyriadProBold;
+    line-height: 95%;
+}
+
+/**** Layout ****/
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 350px;
+    position: relative;
+    padding: 0;
+}
+
+.left-column {
+    background-color: aqua;
+}
+
+.right-column {
+    background-color: aquamarine;
+}
+
+.left-column, .right-column {
+    float: none;
+    width: 100%;
+    padding: 35px;
+    margin: 0;
+}
+
+@media(min-width: 700px) {
+    .left-column {
+        display: inline-block;
+        float: left;
+        width: 350px;
+    }
+    .right-column {
+        float: none;
+        width: auto;
+        margin-left: 350px;
+    }
+}
+
+@media(min-width: 900px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .left-column {
+        float: left;
+        width: 41%;
+    }
+    .right-column {
+        float: right;
+        width: 59%;
+        margin: 0;
+    }
+}
+
+/**** Section title ****/
+
+section {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+section:not(.face) h1 {
+    font-size: 32pt;
+}
+
+
+
+/**** Face ****/
+
+.face {
+    text-align: center;
+}
+.face .photo {
+    position: relative;
+    width: 245px;
+    height: 245px;
+    top: 0;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: #3d6cb0;
+}
+
+.face .photo-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 245px;
+    height: 245px;
+    background-image: url("../img/photo-mask.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    outline: 0;
+    transition: transform 0.6s ease-out;
+    transform: scale(1);
+}
+
+.face .photo:hover .photo-mask {
+    transform: scale(1.07);
+}
+
+
+.face h1 {
+    font-family: MyriadProLightSemiExt;
+    font-size: 39.8pt;
+    line-height: 40pt;
+    margin-bottom: 5px;
+}
+
+.face h1 b {
+    font-size: 47.9pt;
+}
+
+.face h2 {
+    font-size: 18pt;
+}
