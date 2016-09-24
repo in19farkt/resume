@@ -33,14 +33,6 @@ b {
     padding: 0;
 }
 
-.left-column {
-    background-color: aqua;
-}
-
-.right-column {
-    background-color: aquamarine;
-}
-
 .left-column, .right-column {
     float: none;
     width: 100%;
@@ -48,8 +40,21 @@ b {
     margin: 0;
 }
 
+.left-column {
+    padding-top: 46px;
+}
+
+section {
+    position: relative;
+    margin-bottom: 48px;
+}
+
 .left-column section {
     padding-right: 10px;
+}
+
+.right-column section {
+    margin-bottom: 56px;
 }
 
 @media(min-width: 800px) {
@@ -84,12 +89,14 @@ b {
 
 /**** Section title ****/
 
-section {
+.title {
+    vertical-align: middle;
     position: relative;
-    margin-bottom: 48px;
+    background: linear-gradient(to bottom, #ffffff 45%, #3d6cb0 45%, #3d6cb0 52%, #ffffff 52%);
+    margin-bottom: 32px;
 }
 
-section:not(.face) h1 {
+.title h1 {
     font-size: 32pt;
     color: #3d6cb0;
     display: inline-block;
@@ -99,11 +106,8 @@ section:not(.face) h1 {
     background-color: white;
 }
 
-.title {
-    vertical-align: middle;
-    position: relative;
-    background: linear-gradient(to bottom, #ffffff 45%, #3d6cb0 45%, #3d6cb0 52%, #ffffff 52%);
-    margin-bottom: 32px;
+.right-column .title h1 {
+    padding-left: 21px;
 }
 
 .profile .title {
@@ -126,29 +130,29 @@ section:not(.face) h1 {
     background-color: #3d6cb0;
 }
 
-.title .hr {
-    display: block;
-    content: "";
-    height: 10px;
-    width: 30px;
-    background-color: #3d6cb0;
-}
-
 .title .icon-profile {
     background-image: url("../img/icon.png");
     background-repeat: no-repeat;
 }
 
 .title .icon-contact {
-    background-image: url("../img/icon.png");
-    background-repeat: no-repeat;
     background-position: -50px -50px;
 }
 
 .title .icon-skills {
-    background-image: url("../img/icon.png");
-    background-repeat: no-repeat;
     background-position: -100px -50px;
+}
+
+.title .icon-education {
+    background-position: -100px 0px;
+}
+
+.title .icon-experience {
+    background-position: 0px -50px;
+}
+
+.title .icon-software {
+    background-position: -50px 0px;
 }
 
 /**** Face ****/
@@ -281,3 +285,145 @@ div[class$="-mask"] {
 .skills .progress-communication {
     width: 92%;
 }
+
+/**** Education + Experience ****/
+
+.education ul {
+    padding-left: 11px;
+    list-style: none;
+}
+
+.education li {
+    padding-left: 43px;
+    background: url("../img/bullet.svg") no-repeat left 5px;
+    margin-top: 14px;
+}
+
+.education .title {
+    margin-bottom: 27px;
+}
+
+.education h2, h3 {
+    display: inline-block;
+}
+
+.education h2 {
+    font-size: 20pt;
+    color: #3d6cb0;
+    margin-right: 10px;
+}
+
+.education h3 {
+    font-family: MyriadProRegular;
+    font-size: 20pt;
+    text-transform: none;
+}
+
+.education p {
+    margin-top: 5px;
+}
+
+.experience .title {
+    margin-bottom: 41px;
+}
+
+/**** Software ****/
+
+.software .title {
+    margin-bottom: 25px;
+}
+
+.software article {
+    padding-left: 7px;
+    padding-right: 6px;
+    margin-bottom: 21px;
+    text-align: center;
+}
+
+.software h2 {
+    font-family: MyriadProRegular;
+    font-size: 19.5pt;
+    margin-bottom: 13px;
+}
+
+.software .progress-bar {
+    position: relative;
+    height: 24px;
+    width: 286px;
+    margin: 0 auto;
+    margin-top: 3.5px;
+    background-color: #e6e6e6;
+}
+
+.software .progress {
+    height: 24px;
+    background-color: #3d6cb0;
+}
+
+@media(min-width: 695px) {
+    .software article {
+        text-align: left;
+    }
+
+    .software article:nth-child(2n-1) {
+        float: right;
+    }
+
+    .software article:nth-child(2n) {
+        float: left;
+    }
+}
+
+@media(min-width: 800px) {
+    .software article {
+        text-align: center;
+    }
+
+    .software article:nth-child(2n-1) {
+        float: none;
+    }
+
+    .software article:nth-child(2n) {
+        float: none;
+    }
+}
+
+@media(min-width: 1220px), {
+    .software article {
+        text-align: left;
+    }
+
+    .software article:nth-child(2n-1) {
+        float: right;
+    }
+
+    .software article:nth-child(2n) {
+        float: left;
+    }
+}
+
+.software .progress-photoshop {
+    width: 90%;
+}
+
+.software .progress-illustrator {
+    width: 70%;
+}
+
+.software .progress-indesign {
+    width: 55%;
+}
+
+.software .progress-dreamweaver {
+    width: 80%;
+}
+
+.software .progress-after_effects {
+    width: 60%;
+}
+
+.software .progress-html_css3 {
+    width: 90%;
+}
+
+
