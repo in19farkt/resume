@@ -388,7 +388,7 @@ div[class$="-mask"] {
     }
 }
 
-@media(min-width: 1220px), {
+@media(min-width: 1220px) {
     .software article {
         text-align: left;
     }
