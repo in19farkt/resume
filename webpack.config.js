@@ -3,12 +3,13 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: __dirname + '\\frontend',
 
     entry: {
-        build: './'
+        pug: './index.pug'
     },
 
     output: {
@@ -24,18 +25,19 @@ module.exports = {
             NODE_ENV: JSON.stringify(NODE_ENV),
             LANG: JSON.stringify('ru')
         }),
-        new ExtractTextPlugin('[name].css', {allChunks: true})
+        new ExtractTextPlugin('[name].css', {allChunks: true}),
+        new HtmlWebpackPlugin({filename: 'index.html', template: './index.pug', inject: false})
     ],
 
     resolve: {
         modulesDirectories: ['node_modules'],
-        extensions:         ['', '.js', '.styl']
+        extensions: ['', '.js', '.styl', '.pug']
     },
 
     resolveLoader: {
         modulesDirectories: ['node_modules'],
-        modulesTemplates:   ['*-loader', '*'],
-        extensions:         ['', '.js']
+        modulesTemplates: ['*-loader', '*'],
+        extensions: ['', '.js']
     },
 
     module: {
@@ -49,7 +51,7 @@ module.exports = {
             }
         }, {
             test: /\.pug$/,
-            loader: "pug"
+            loader: 'pug'
         }, {
             test: /\.css$/,
             loader: 'style!css' //!autoprefixer?browsers=last 2 versions'

@@ -1,0 +1,46 @@
+.layout__center-aligner
+  margin 0 auto
+  max-width 1280px
+  min-width 400px
+  position relative
+  padding 0
+
+.layout__left-column
+.layout__right-column
+  float none
+  width 100%
+  padding 35px
+  margin 0
+
+.layout__left-column {
+  padding-top: 46px;
+}
+
+@media(min-width: 800px) {
+  .layout__left-column {
+    display: inline-block;
+    float: left;
+    width: 400px;
+  }
+  .layout__right-column {
+    float: none;
+    width: auto;
+    margin-left: 400px;
+  }
+}
+
+@media(min-width: 1050px) {
+  .layout__center-aligner {
+    padding: 0 25px;
+  }
+
+  .layout__left-column {
+    float: left;
+    width: 41%;
+  }
+  .layout__right-column {
+    float: right;
+    width: 59%;
+    margin: 0;
+  }
+}
