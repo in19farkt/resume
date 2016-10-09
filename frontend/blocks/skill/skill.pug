@@ -1,0 +1,13 @@
+mixin skill(type, value)
+  -
+    value = + value;
+    if (isNaN(value)) value = 0;
+    if (value < 0) value = 0;
+    if (value > 12) value = 12;
+    var i = 0;
+
+  .skill
+    span.skill__type #{type}
+    .skill__level
+      while i < 12
+        .skill__level-item(class= i++ < value ? 'skill__level-item_enable' : 'skill__level-item_disable')

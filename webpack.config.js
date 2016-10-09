@@ -9,12 +9,12 @@ module.exports = {
     context: __dirname + '\\frontend',
 
     entry: {
-        pug: './index.pug'
+        main: './main.js'
     },
 
     output: {
         path: __dirname + '/public',
-        filename: "[name].js"
+        filename: "main.js"
     },
 
     devtool: 'cheap-inline-module-source-map',
@@ -22,11 +22,10 @@ module.exports = {
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV),
-            LANG: JSON.stringify('ru')
+            NODE_ENV: JSON.stringify(NODE_ENV)
         }),
         new ExtractTextPlugin('[name].css', {allChunks: true}),
-        new HtmlWebpackPlugin({filename: 'index.html', template: './index.pug', inject: false})
+        new HtmlWebpackPlugin({filename: 'index.html', template: './index.pug'})
     ],
 
     resolve: {

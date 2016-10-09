@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+  font-family: MyriadProRegular;
+}
+b {
+  font-family: MyriadProBold;
+}
+p {
+  font-size: 1.06rem;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* font-family: "MyriadProRegular"; */
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url(fonts/MyriadProRegular/MyriadProRegular.eot);
+  src: url(fonts/MyriadProRegular/MyriadProRegular.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProRegular/MyriadProRegular.woff) format("woff"), url(fonts/MyriadProRegular/MyriadProRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProBold"; */
+@font-face {
+  font-family: "MyriadProBold";
+  src: url(fonts/MyriadProBold/MyriadProBold.eot);
+  src: url(fonts/MyriadProBold/MyriadProBold.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProBold/MyriadProBold.woff) format("woff"), url(fonts/MyriadProBold/MyriadProBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProItalic"; */
+@font-face {
+  font-family: "MyriadProItalic";
+  src: url(fonts/MyriadProItalic/MyriadProItalic.eot);
+  src: url(fonts/MyriadProItalic/MyriadProItalic.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProItalic/MyriadProItalic.woff) format("woff"), url(fonts/MyriadProItalic/MyriadProItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProSemiBold"; */
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url(fonts/MyriadProSemiBold/MyriadProSemiBold.eot);
+  src: url(fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProSemiBold/MyriadProSemiBold.woff) format("woff"), url(fonts/MyriadProSemiBold/MyriadProSemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProBoldItalic"; */
+@font-face {
+  font-family: "MyriadProBoldItalic";
+  src: url(fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot);
+  src: url(fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff) format("woff"), url(fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProSemiBoldItalic"; */
+@font-face {
+  font-family: "MyriadProSemiBoldItalic";
+  src: url(fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot);
+  src: url(fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff) format("woff"), url(fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProLightSemiExt"; */
+@font-face {
+  font-family: "MyriadProLightSemiExt";
+  src: url(fonts/MyriadProLightSemiExt/MyriadProLightSemiExt.eot);
+  src: url(fonts/MyriadProLightSemiExt/MyriadProLightSemiExt.eot?#iefix) format("embedded-opentype"), url(fonts/MyriadProLightSemiExt/MyriadProLightSemiExt.woff) format("woff"), url(fonts/MyriadProLightSemiExt/MyriadProLightSemiExt.ttf) format("truetype"), url(fonts/MyriadProLightSemiExt/MyriadProLightSemiExt.svg) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.layout__center-aligner {
+  margin: 0 auto;
+  max-width: 1650px;
+  min-width: 400px;
+  position: relative;
+}
+.layout__left-column,
+.layout__right-column {
+  float: none;
+  width: 100%;
+  padding: 25px 4.6%;
+  padding-left: 4.9%;
+  margin: 0;
+}
+@media screen and (min-width: 800px) {
+  .layout__left-column {
+    display: inline-block;
+    float: left;
+    width: 400px;
+  }
+  .layout__right-column {
+    float: none;
+    width: auto;
+    margin-left: 400px;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .layout__left-column {
+    float: left;
+    width: 44.4%;
+  }
+  .layout__right-column {
+    float: right;
+    width: 55.6%;
+    margin: 0;
+  }
+}
+.name {
+  text-align: center;
+  min-width: 150px;
+  padding: 1.5% 5% 0 5%;
+  margin-bottom: 14.2%;
+}
+.name__photo-frame {
+  position: relative;
+  border: 1.5px solid #3d6cb0;
+  border-radius: 50%;
+  max-width: 255px;
+  margin: 0 auto 8.4% auto;
+}
+.name__photo-frame:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.name__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3d6cb0;
+  border-radius: 50%;
+  width: 87.4%;
+  margin: 6.3%;
+}
+.name__photo:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.name-info span {
+  display: block;
+  text-transform: uppercase;
+}
+.name-info .name-info__name {
+  font-family: MyriadProLightSemiExt;
+  font-size: 3.65rem;
+  line-height: 3.4rem;
+}
+.name-info .name-info__surname {
+  font-family: MyriadProBold;
+  font-size: 4.22rem;
+  line-height: 3.4rem;
+}
+.name-info .name-info__profession {
+  font-family: MyriadProBold;
+  font-size: 1.65rem;
+  line-height: 3.95rem;
+}
+.article {
+  margin-top: 10.4%;
+}
+.article__title {
+  vertical-align: middle;
+  background: linear-gradient(to bottom, #fff 45%, #3d6cb0 45%, #3d6cb0 52%, #fff 52%);
+}
+.article__icon-frame {
+  position: relative;
+  float: left;
+  border: 1.5px solid #3d6cb0;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 4.95rem;
+}
+.article__icon-frame:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.article__icon-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3d6cb0;
+  border-radius: 50%;
+  width: 92.4%;
+  margin: 3.8%;
+}
+.article__icon-background:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.article__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 15%;
+  background-image: url(img/icon.png);
+  background-repeat: no-repeat;
+  background-size: 330%;
+}
+.article__title-text {
+  font-family: MyriadProBold;
+  font-size: 2.8rem;
+  line-height: 4.9rem;
+  text-transform: uppercase;
+  padding-left: 0.8rem;
+  padding-right: 0.5rem;
+  color: #3d6cb0;
+  background-color: #fff;
+}
+.article__content {
+  margin-top: 3%;
+}
+.layout__left-column .article {
+  padding-right: 4%;
+}
+.article__icon_profile {
+  background-position: 1% 4%;
+}
+.article__icon_contact {
+  background-position: 50% 96%;
+}
+.article__icon_skills {
+  background-position: 99% 96%;
+}
+.article__icon_education {
+  background-position: 99% 4%;
+}
+.article__icon_experience {
+  background-position: 1% 96%;
+}
+.article__icon_software {
+  background-position: 50% 4%;
+}
+.contact {
+  margin-top: 7%;
+}
+.contact__type {
+  display: inline-block;
+  min-width: 31%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #3d6cb0;
+  font-family: MyriadProBold;
+}
+.contact__value {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.skill {
+  margin-top: 4.4%;
+  text-align: center;
+}
+.skill:first-child {
+  margin-top: 5.5%;
+}
+.skill__type {
+  text-transform: uppercase;
+  font-size: 1.78rem;
+}
+.skill__level {
+  max-width: 366px;
+  margin: 0 auto;
+  margin-top: 0.9%;
+}
+.skill__level-item {
+  position: relative;
+  display: inline-block;
+  width: 5.26%;
+  border-radius: 50%;
+  margin: 1.51%;
+  margin-bottom: 0;
+}
+.skill__level-item:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.skill__level-item_enable {
+  background-color: #3d6cb0;
+}
+.skill__level-item_disable {
+  background-color: #e6e6e6;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiLCJzb3VyY2VSb290IjoiIn0=*/
