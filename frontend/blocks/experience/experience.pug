@@ -1,9 +1,9 @@
-mixin experience(company, date, specialty)
+mixin experience(profession, date, organization)
   .experience
     .experience__marker
     .experience__title
-      span.experience__company #{company}
+      span.experience__profession #{profession}
       span.experience__date // #{date}
-      span.experience__specialty #{specialty}
+      span.experience__organization #{organization}
       .experience__content
         block

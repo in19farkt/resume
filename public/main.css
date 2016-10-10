@@ -219,57 +219,12 @@
 .skill__level-item_disable {
   background-color: #e6e6e6;
 }
-.education {
-  position: relative;
-  margin-top: 1.7%;
-}
-.education:first-child {
-  margin-top: 4%;
-}
-.education__marker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1.85%;
-  margin-top: 0.54rem;
-  max-width: 5%;
-  width: 1.35rem;
-  border-radius: 50%;
-  background-color: #000;
-}
-.education__marker:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-.education__title {
-  margin-left: 8.3%;
-}
-.education__content {
-  margin-top: 1%;
-}
-.education__profession,
-.education__date,
-.education__university {
-  display: inline-block;
-  font-size: 1.75rem;
-  line-height: 2.3rem;
-  margin-right: 3%;
-}
-.education__profession,
-.education__university {
-  text-transform: uppercase;
-}
-.education__profession {
-  font-family: MyriadProBold;
-  color: #3d6cb0;
-}
 .experience {
   position: relative;
   margin-top: 1.7%;
 }
 .experience:first-child {
-  margin-top: 6.4%;
+  margin-top: 4%;
 }
 .experience__marker {
   position: absolute;
@@ -293,20 +248,26 @@
 .experience__content {
   margin-top: 1%;
 }
-.experience__company,
+.experience__profession,
 .experience__date,
-.experience__specialty {
+.experience__organization {
   display: inline-block;
   font-size: 1.75rem;
   line-height: 2.3rem;
   margin-right: 3%;
 }
-.experience__company,
-.experience__specialty {
+.experience__profession,
+.experience__organization {
   text-transform: uppercase;
 }
-.experience__company {
+.experience__profession {
   font-family: MyriadProBold;
+  color: #3d6cb0;
+}
+.layout__right-column .article:nth-child(2) .experience:first-child {
+  margin-top: 6.3%;
+}
+.layout__right-column .article:nth-child(2) .experience__profession {
   color: #000;
 }
 .software {
@@ -433,4 +394,4 @@ p {
   font-style: normal;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyIsInNvdXJjZVJvb3QiOiIifQ==*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyIsInNvdXJjZVJvb3QiOiIifQ==*/
