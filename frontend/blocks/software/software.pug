@@ -1,0 +1,11 @@
+mixin software(type, value)
+  -
+    value = + value;
+    if (isNaN(value)) value = 0;
+    if (value < 0) value = 0;
+    if (value > 100) value = 100;
+
+  .software
+    span.software__type #{type}
+    .software__value-frame
+      .software__value(style= 'width: ' + value + '%;')

@@ -1,6 +1,9 @@
 .article
   margin-top: 10.4%
 
+.article:first-child
+  margin-top: 0
+
 .article__title
   vertical-align middle
   background linear-gradient(to bottom, #ffffff 45%, #3d6cb0 45%, #3d6cb0 52%, #ffffff 52%)
@@ -48,18 +51,30 @@
   font-size 2.8rem
   line-height 4.9rem
   text-transform uppercase
-  padding-left 0.8rem
-  padding-right 0.5rem
+  padding-left 3%
+  padding-right 3%
   color #3d6cb0
   background-color white
 
 .article__content
   margin-top 3%
 
-
+//**** Костыли ****//
 
 .layout__left-column .article
   padding-right 4%
+
+.layout__left-column .article:nth-child(4)
+  padding-top 1%
+
+.layout__right-column .article
+  margin-top 8.3%
+
+.layout__right-column .article:first-child
+  margin-top 0
+
+.layout__right-column .article:nth-child(3) .article__content
+  padding-left 1%
 
 //**** Icons ****//
 

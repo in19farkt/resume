@@ -3,6 +3,9 @@ include blocks/name/name
 include blocks/article/article
 include blocks/contact/contact
 include blocks/skill/skill
+include blocks/education/education
+include blocks/experience/experience
+include blocks/software/software
 
 html
   head
@@ -34,3 +37,54 @@ html
           +skill('innovate', 6)
           +skill('communication', 11)
       include blocks/layout/layout__right-column
+        +article('education', 'education')
+          +education('master degree', 'Feb 2011 - Jun 2014', 'university name')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+          +education('master degree', 'Feb 2011 - Jun 2014', 'university name')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+          +education('master degree', 'Feb 2011 - Jun 2014', 'university name')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+          +education('master degree', 'Feb 2011 - Jun 2014', 'university name')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+        +article('experience', 'experience')
+          +experience('company name', 'Feb 2011 - Jun 2014', 'your job here')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+          +experience('company name', 'Feb 2011 - Jun 2014', 'your job here')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+          +experience('company name', 'Feb 2011 - Jun 2014', 'your job here')
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+              | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              | ultricies nec, pellentesque.
+        +article('software', 'software')
+          +software('photoshop', 90)
+          +software('dreamweaver', 80)
+          +software('illustrator', 70)
+          +software('after effects', 60)
+          +software('indesign', 55)
+          +software('html&css3', 90)
