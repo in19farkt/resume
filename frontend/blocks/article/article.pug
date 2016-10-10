@@ -5,5 +5,5 @@ mixin article(title, icon)
         .article__icon-background
           .article__icon(class= 'article__icon_' + icon)
       span.article__title-text #{title}
-    .article__content
+    .article__content.clearfix
       block
