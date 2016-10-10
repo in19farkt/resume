@@ -4,31 +4,31 @@
   padding 2.9% 5% 0 5%
   margin-bottom 14.2%
 
-.name__photo-frame
-  position relative
-  border 1.5px solid main_color
-  border-radius 50%
-  max-width 255px
-  margin 0 auto 8.4% auto
-
-.name__photo-frame:before
-  content ""
-  display block
-  padding-top 100%
-
-.name__photo
-  position absolute
-  top 0
-  left 0
-  background-color main_color
-  border-radius 50%
-  width 87.4%
-  margin 6.3%
-
-.name__photo:before
-  content ""
-  display block
-  padding-top 100%
+  &__photo-frame
+    position relative
+    border 1.5px solid main_color
+    border-radius 50%
+    max-width 255px
+    margin 0 auto 8.4% auto
+  
+    &:before
+      content ""
+      display block
+      padding-top 100%
+  
+  &__photo
+    position absolute
+    top 0
+    left 0
+    background-color main_color
+    border-radius 50%
+    width 87.4%
+    margin 6.3%
+  
+    &:before
+      content ""
+      display block
+      padding-top 100%
 
 .name-info
 
@@ -36,17 +36,17 @@
     display block
     text-transform uppercase
 
-  .name-info__name
+  &__name
     font-family MyriadProLightSemiExt
     font-size 3.65rem
     line-height 3.4rem
 
-  .name-info__surname
+  &__surname
     font-family MyriadProBold
     font-size 4.22rem
     line-height 3.4rem
 
-  .name-info__profession
+  &__profession
     font-family MyriadProBold
     font-size 1.65rem
     line-height 3.95rem

@@ -1,97 +1,100 @@
 .article
   margin-top: 10.4%
 
-.article:first-child
-  margin-top: 0
+  &:first-child
+    margin-top: 0
 
-.article__title
-  vertical-align middle
-  background linear-gradient(to bottom, #ffffff 42.5%, main_color 42.5%, main_color 57.5%, #ffffff 57.5%)
+  &__title
+    vertical-align middle
+    background linear-gradient(to bottom, #ffffff 42.5%, main_color 42.5%, main_color 57.5%, #ffffff 57.5%)
 
-.article__icon-frame
-  position relative
-  float left
-  border 1.5px solid main_color
-  border-radius 50%
-  background-color white
-  width 4.95rem
+  &__icon-frame
+    position relative
+    float left
+    border 1.5px solid main_color
+    border-radius 50%
+    background-color white
+    width 4.95rem
 
-.article__icon-frame:before
-  content ""
-  display block
-  padding-top 100%
+    &:before
+      content ""
+      display block
+      padding-top 100%
 
-.article__icon-background
-  position absolute
-  top 0
-  left 0
-  background-color main_color
-  border-radius 50%
-  width 92.4%
-  margin 3.8%
+  &__icon-background
+    position absolute
+    top 0
+    left 0
+    background-color main_color
+    border-radius 50%
+    width 92.4%
+    margin 3.8%
 
-.article__icon-background:before
-  content ""
-  display block
-  padding-top 100%
+    &:before
+      content ""
+      display block
+      padding-top 100%
 
-.article__icon
-  position absolute
-  top 0
-  bottom 0
-  left 0
-  right 0
-  margin 15%
-  background-image url("../../img/icon.png")
-  background-repeat no-repeat
-  background-size 330%
+  &__title-text
+    font-family MyriadProBold
+    font-size 2.8rem
+    line-height 4.9rem
+    text-transform uppercase
+    padding-left 3%
+    padding-right 3%
+    color main_color
+    background-color white
 
-.article__title-text
-  font-family MyriadProBold
-  font-size 2.8rem
-  line-height 4.9rem
-  text-transform uppercase
-  padding-left 3%
-  padding-right 3%
-  color main_color
-  background-color white
+  &__content
+    margin-top 3%
 
-.article__content
-  margin-top 3%
+  &__icon
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin 15%
+    background-image url("../../img/icon.png")
+    background-repeat no-repeat
+    background-size 330%
 
+    //**** Icons ****//
+
+    &_profile
+      background-position 1% 4%
+
+    &_contact
+      background-position 50% 96%
+
+    &_skills
+      background-position 99% 96%
+
+    &_education
+      background-position 99% 4%
+
+    &_experience
+      background-position 1% 96%
+
+    &_software
+      background-position 50% 4%
+    
 //**** Костыли ****//
 
-.layout__left-column .article
-  padding-right 4%
+.layout
+  &__left-column
+    .article
+      padding-right 4%
 
-.layout__left-column .article:nth-child(4)
-  padding-top 1%
+      &:nth-child(4)
+        padding-top 1%
 
-.layout__right-column .article
-  margin-top 8.3%
+  &__right-column
+    .article
+      margin-top 8.3%
 
-.layout__right-column .article:first-child
-  margin-top 0
+      &:first-child
+        margin-top 0
 
-.layout__right-column .article:nth-child(3) .article__content
-  padding-left 1%
-
-//**** Icons ****//
-
-.article__icon_profile
-  background-position 1% 4%
-
-.article__icon_contact
-  background-position 50% 96%
-
-.article__icon_skills
-  background-position 99% 96%
-
-.article__icon_education
-  background-position 99% 4%
-
-.article__icon_experience
-  background-position 1% 96%
-
-.article__icon_software
-  background-position 50% 4%
+      &:nth-child(3) .article__content
+        padding-left 1%

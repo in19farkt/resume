@@ -1,24 +1,26 @@
-.layout__center-aligner
-  margin 0 auto
-  max-width 1650px
-  min-width 400px
-  position relative
+.layout
+  &__center-aligner
+    margin 0 auto
+    max-width 1650px
+    min-width 400px
+    position relative
 
-.layout__left-column
-.layout__right-column
-  float none
-  width 100%
-  padding 25px 4.6%
-  padding-left 4.9%
-  margin 0
+  &__left-column
+  &__right-column
+    float none
+    width 100%
+    padding 25px 4.6%
+    padding-left 4.9%
+    margin 0
 
 @media screen and (min-width: 920px)
-  .layout__left-column
-    float left
-    width 44.4%
+  .layout
+    &__left-column
+      float left
+      width 44.4%
 
-  .layout__right-column
-    float right
-    width 55.6%
-    margin 0
-    padding-left 0
+    &__right-column
+      float right
+      width 55.6%
+      margin 0
+      padding-left 0

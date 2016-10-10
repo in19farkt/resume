@@ -60,17 +60,17 @@
   display: block;
   text-transform: uppercase;
 }
-.name-info .name-info__name {
+.name-info__name {
   font-family: MyriadProLightSemiExt;
   font-size: 3.65rem;
   line-height: 3.4rem;
 }
-.name-info .name-info__surname {
+.name-info__surname {
   font-family: MyriadProBold;
   font-size: 4.22rem;
   line-height: 3.4rem;
 }
-.name-info .name-info__profession {
+.name-info__profession {
   font-family: MyriadProBold;
   font-size: 1.65rem;
   line-height: 3.95rem;
@@ -112,17 +112,6 @@
   display: block;
   padding-top: 100%;
 }
-.article__icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 15%;
-  background-image: url(img/icon.png);
-  background-repeat: no-repeat;
-  background-size: 330%;
-}
 .article__title-text {
   font-family: MyriadProBold;
   font-size: 2.8rem;
@@ -136,20 +125,16 @@
 .article__content {
   margin-top: 3%;
 }
-.layout__left-column .article {
-  padding-right: 4%;
-}
-.layout__left-column .article:nth-child(4) {
-  padding-top: 1%;
-}
-.layout__right-column .article {
-  margin-top: 8.3%;
-}
-.layout__right-column .article:first-child {
-  margin-top: 0;
-}
-.layout__right-column .article:nth-child(3) .article__content {
-  padding-left: 1%;
+.article__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 15%;
+  background-image: url(img/icon.png);
+  background-repeat: no-repeat;
+  background-size: 330%;
 }
 .article__icon_profile {
   background-position: 1% 4%;
@@ -168,6 +153,21 @@
 }
 .article__icon_software {
   background-position: 50% 4%;
+}
+.layout__left-column .article {
+  padding-right: 4%;
+}
+.layout__left-column .article:nth-child(4) {
+  padding-top: 1%;
+}
+.layout__right-column .article {
+  margin-top: 8.3%;
+}
+.layout__right-column .article:first-child {
+  margin-top: 0;
+}
+.layout__right-column .article:nth-child(3) .article__content {
+  padding-left: 1%;
 }
 .contact {
   margin-top: 7%;
@@ -314,7 +314,19 @@
   text-align: center;
   margin-top: 3.5%;
 }
-@media screen and (min-width: 695px) and (max-width: 800px) {
+.software__type {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+.software__value-frame {
+  background-color: #e6e6e6;
+  margin-top: 4.3%;
+}
+.software__value {
+  height: 2.5%;
+  background-color: #3d6cb0;
+}
+@media screen and (min-width: 695px) and (max-width: 919px) {
   .software {
     width: 45%;
     text-align: left;
@@ -343,18 +355,6 @@
   .software:nth-child(-n+2) {
     margin-top: 1%;
   }
-}
-.software__type {
-  text-transform: uppercase;
-  font-size: 1.8rem;
-}
-.software__value-frame {
-  background-color: #e6e6e6;
-  margin-top: 4.3%;
-}
-.software__value {
-  height: 2.5%;
-  background-color: #3d6cb0;
 }
 * {
   box-sizing: border-box;
