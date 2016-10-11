@@ -1,9 +1,10 @@
 mixin article(title, icon)
   .article
     .article__title
-      .article__icon-frame
-        .article__icon-background
-          .article__icon(class= 'article__icon_' + icon)
+      .article__icon-frame-background
+        .article__icon-frame
+          .article__icon-background
+            .article__icon(class= 'article__icon_' + icon)
       span.article__title-text #{title}
     .article__content.clearfix
       block
