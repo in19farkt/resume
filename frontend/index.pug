@@ -16,7 +16,7 @@ html
           surname: 'surname',
           profession: 'graphic designer'
         })
-        +article('profile', 'profile')
+        +article({title: 'profile', icon: 'profile'})
           p
             |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             |Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
@@ -28,18 +28,18 @@ html
             |Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
             |eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
             |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </b>
-        +article('contact', 'contact')
+        +article({title: 'contact', icon: 'contact'})
           +contact('address', 'Main Street, City.')
           +contact('e-mail', 'contact@domain.com')
           +contact('phone', '555-555-555')
           +contact('website', 'www.yourweb.com')
-        +article('skills', 'skills')
+        +article({title: 'skills', icon: 'skills'})
           +skill('creative', 9)
           +skill('teamwork', 11)
           +skill('innovate', 6)
           +skill('communication', 11)
       include blocks/layout/layout__right-column
-        +article('education', 'education')
+        +article({title: 'education', icon: 'education'})
           +experience('master degree', 'Feb 2011 - Jun 2014', 'university name')
             p
               | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -64,7 +64,7 @@ html
               | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
               | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
               | ultricies nec, pellentesque.
-        +article('experience', 'experience')
+        +article({title: 'experience', icon: 'experience'})
           +experience('company name', 'Feb 2011 - Jun 2014', 'your job here')
             p
               | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -83,7 +83,7 @@ html
               | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
               | et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
               | ultricies nec, pellentesque.
-        +article('software', 'software')
+        +article({title: 'software', icon: 'software'})
           +software('photoshop', 90)
           +software('dreamweaver', 80)
           +software('illustrator', 70)

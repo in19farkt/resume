@@ -40,18 +40,6 @@
       display block
       padding-top 100%
 
-  &__title-text
-    font-family MyriadProBold
-    font-size 2.8rem
-    text-transform uppercase
-    padding-left 3%
-    padding-right 3%
-    color main_color
-    background-color white
-
-  &__content
-    margin-top 3%
-
   &__icon
     position absolute
     top 0
@@ -82,6 +70,21 @@
 
     &_software
       background-position 50% 4%
+
+  &__title-text
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    font-family MyriadProBold
+    font-size 2.8rem
+    text-transform uppercase
+    padding-left 3%
+    padding-right 3%
+    color main_color
+    background-color white
+
+  &__content
+    margin-top 3%
     
 //**** Костыли ****//
 

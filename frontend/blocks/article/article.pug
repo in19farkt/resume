@@ -1,10 +1,17 @@
-mixin article(title, icon)
+//-
+  options.title - текст заголовка
+  options.icon - стиль иконки
+
+mixin article(options)
+  if !options
+    - options = {}
+
   .article
     .article__title
       .article__icon-frame-background
         .article__icon-frame
           .article__icon-background
-            .article__icon(class= 'article__icon_' + icon)
-      span.article__title-text #{title}
+            .article__icon(class= 'article__icon_' + options.icon)
+      span.article__title-text= options.title || ''
     .article__content.clearfix
       block
