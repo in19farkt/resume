@@ -40,18 +40,6 @@
   display: block;
   padding-top: 100%;
 }
-.article__title-text {
-  font-family: MyriadProBold;
-  font-size: 2.8rem;
-  text-transform: uppercase;
-  padding-left: 3%;
-  padding-right: 3%;
-  color: #3d6cb0;
-  background-color: #fff;
-}
-.article__content {
-  margin-top: 3%;
-}
 .article__icon {
   position: absolute;
   top: 0;
@@ -81,6 +69,21 @@
 .article__icon_software {
   background-position: 50% 4%;
 }
+.article__title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: MyriadProBold;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: #3d6cb0;
+  background-color: #fff;
+}
+.article__content {
+  margin-top: 3%;
+}
 .layout__left-column .article {
   padding-right: 4%;
 }
@@ -98,18 +101,24 @@
 }
 .contact {
   margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.contact__type {
-  display: inline-block;
-  min-width: 31%;
+.contact__title {
+  flex-basis: 28%;
   text-transform: uppercase;
   font-size: 1.4rem;
   color: #3d6cb0;
   font-family: MyriadProBold;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .contact__value {
-  display: inline-block;
+  flex-basis: 69%;
   font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .experience {
   position: relative;
@@ -147,6 +156,9 @@
   font-size: 1.75rem;
   line-height: 2.3rem;
   margin-right: 3%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .experience__profession,
 .experience__organization {
@@ -242,16 +254,22 @@
 .skill {
   margin-top: 4.4%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 .skill:first-child {
   margin-top: 5.5%;
 }
-.skill__type {
+.skill__title {
   text-transform: uppercase;
   font-size: 1.78rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .skill__level {
   max-width: 366px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 0.9%;
 }
@@ -275,21 +293,26 @@
   background-color: #e6e6e6;
 }
 .software {
-  margin-top: 1%;
   text-align: center;
   margin-top: 3.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
-.software__type {
+.software__title {
   text-transform: uppercase;
   font-size: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .software__value-frame {
   background-color: #e6e6e6;
   margin-top: 4.3%;
 }
 .software__value {
-  height: 2.5%;
   background-color: #3d6cb0;
+  height: 2.5%;
 }
 @media screen and (min-width: 695px) and (max-width: 919px) {
   .software {
@@ -335,6 +358,9 @@ b {
 }
 p {
   font-size: 1.06rem;
+}
+a {
+  color: #3d6cb0;
 }
 .clearfix::after {
   content: "";

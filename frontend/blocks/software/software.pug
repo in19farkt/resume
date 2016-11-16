@@ -1,11 +1,17 @@
-mixin software(type, value)
+//-
+  options.title - заголовок
+  options.value - значение от 0 до 100
+
+mixin software(options)
   -
-    value = + value;
-    if (isNaN(value)) value = 0;
-    if (value < 0) value = 0;
-    if (value > 100) value = 100;
+    if (!options) options = {}
+    
+    options.value = + options.value;
+    if (isNaN(options.value)) options.value = 0;
+    if (options.value < 0) options.value = 0;
+    if (options.value > 100) options.value = 100;
 
   .software
-    span.software__type #{type}
+    span.software__title= options.title || ''
     .software__value-frame
-      .software__value(style= 'width: ' + value + '%;')
+      .software__value(style= 'width: ' + options.value + '%;')
