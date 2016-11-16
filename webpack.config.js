@@ -9,12 +9,12 @@ module.exports = {
     context: __dirname + '/frontend',
 
     entry: {
-        main: './main.js'
+        main: './index.js'
     },
 
     output: {
         path: __dirname + '/public',
-        filename: "main.js"
+        filename: "index.js"
     },
 
     devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
@@ -24,7 +24,7 @@ module.exports = {
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV)
         }),
-        new ExtractTextPlugin('[name].css', {allChunks: true}),
+        new ExtractTextPlugin('index.css', {allChunks: true}),
         new HtmlWebpackPlugin({filename: 'index.html', template: './index.pug'})
     ],
 

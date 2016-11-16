@@ -1,4 +1,3 @@
-// mixins
 include blocks/name/name
 include blocks/article/article
 include blocks/contact/contact
@@ -12,7 +11,11 @@ html
   body
     include  blocks/layout/layout
       include blocks/layout/layout__left-column
-        +name('name here', 'surname', 'graphic designer')
+        +name({
+          name: 'name here',
+          surname: 'surname',
+          profession: 'graphic designer'
+        })
         +article('profile', 'profile')
           p
             |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

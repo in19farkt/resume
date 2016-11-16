@@ -1,8 +1,16 @@
-mixin name(name, surname, profession)
+//-
+  options.name -
+  options.surname -
+  options.profession -
+
+mixin name(options)
+  if !options
+    - options = {}
+
   .name
     .name__photo-frame
       .name__photo
     .name-info
-      span.name-info__name #{name}
-      span.name-info__surname #{surname}
-      span.name-info__profession #{profession}
+      .name-info__name= options.name || ''
+      .name-info__surname= options.surname || ''
+      .name-info__profession= options.profession || ''

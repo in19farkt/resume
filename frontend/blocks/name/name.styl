@@ -1,12 +1,11 @@
 .name
   text-align center
-  min-width 150px
   padding 2.9% 5% 0 5%
   margin-bottom 14.2%
 
   &__photo-frame
     position relative
-    border 1.5px solid main_color
+    border 0.1rem solid main_color
     border-radius 50%
     max-width 255px
     margin 0 auto 8.4% auto
@@ -32,9 +31,10 @@
 
 .name-info
 
-  span
-    display block
+  & > *
     text-transform uppercase
+    overflow hidden
+    text-overflow ellipsis
 
   &__name
     font-family MyriadProLightSemiExt
