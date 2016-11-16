@@ -1,9 +1,17 @@
-mixin experience(profession, date, organization)
+//-
+  options.profession - профессия/должность
+  options.date - дата
+  options.organization - организация/компания
+
+mixin experience(options)
+  if !options
+    - options = {}
+
   .experience
     .experience__marker
     .experience__title
-      span.experience__profession #{profession}
-      span.experience__date // #{date}
-      span.experience__organization #{organization}
+      span.experience__profession= options.profession || ''
+      span.experience__date= '//' + options.date || ''
+      span.experience__organization= options.organization || ''
       .experience__content
         block
