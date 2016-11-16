@@ -1,14 +1,20 @@
 .contact
   margin-top 7%
+  display flex
+  justify-content space-between
+  align-items center
 
-  &__type
-    display inline-block
-    min-width 31%
+  &__title
+    flex-basis 28%
     text-transform uppercase
     font-size 1.4rem
     color main_color
     font-family MyriadProBold
+    overflow hidden
+    text-overflow ellipsis
 
   &__value
-    display inline-block
+    flex-basis 69%
     font-size 1.4rem
+    overflow hidden
+    text-overflow ellipsis

@@ -29,10 +29,10 @@ html
             |eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
             |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </b>
         +article({title: 'contact', icon: 'contact'})
-          +contact('address', 'Main Street, City.')
-          +contact('e-mail', 'contact@domain.com')
-          +contact('phone', '555-555-555')
-          +contact('website', 'www.yourweb.com')
+          +contact({title: 'adress', value: 'Main Street, City.'})
+          +contact({title: 'e-mail', type: 'email', value: 'contact@domain.com'})
+          +contact({title: 'phone', type: 'tel', value: '555-555-555'})
+          +contact({title: 'website', type: 'site', value: 'http://www.yourweb.com'})
         +article({title: 'skills', icon: 'skills'})
           +skill('creative', 9)
           +skill('teamwork', 11)

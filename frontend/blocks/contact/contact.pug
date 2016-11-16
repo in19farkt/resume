@@ -1,4 +1,33 @@
-mixin contact(type, value)
+//-
+  options.title - заголовок контакта
+  options.value - контакт
+  options.type - тип контакта ('tel', 'email', 'skype', 'site')
+
+mixin contact(options)
+  if !options
+    - options = {}
+
   .contact
-    span.contact__type #{type}
-    span.contact__value #{value}
+    .contact__title= options.title || ''
+    if (options.type && options.value)
+      if (options.type == 'tel')
+        a.contact__value(href = 'tel: ' + options.value)= options.value
+
+      else if (options.type == 'email')
+        a.contact__value(href = 'mailto: ' + options.value)= options.value
+
+      else if (options.type == 'skype')
+        a.contact__value(href = 'skype: ' + options.value + '?call')= options.value
+
+      else if (options.type == 'site')
+        a.contact__value(
+          href = options.value
+          target = '_blank'
+          rel = 'noopener noreferrer'
+        )= options.value
+
+      else
+        .contact__value= options.value
+
+    else
+      .contact__value= options.value
