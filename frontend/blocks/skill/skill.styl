@@ -1,16 +1,22 @@
 .skill
   margin-top 4.4%
   text-align center
+  display flex
+  flex-direction column
+  align-items stretch
 
   &:first-child
     margin-top: 5.5%
 
-  &__type
+  &__title
     text-transform uppercase
     font-size 1.78rem
+    overflow hidden
+    text-overflow ellipsis
 
   &__level
     max-width 366px
+    width 100%
     margin 0 auto
     margin-top 0.9%
 

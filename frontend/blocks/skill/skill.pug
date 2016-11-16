@@ -1,13 +1,19 @@
-mixin skill(type, value)
+//-
+  options.title - заголовок скила
+  options.value - значение от 0 до 12
+
+mixin skill(options)
   -
-    value = + value;
-    if (isNaN(value)) value = 0;
-    if (value < 0) value = 0;
-    if (value > 12) value = 12;
+    if (!options) options = {}
+    
+    options.value = + options.value;
+    if (isNaN(options.value)) options.value = 0;
+    if (options.value < 0) options.value = 0;
+    if (options.value > 12) options.value = 12;
     var i = 0;
 
   .skill
-    span.skill__type #{type}
+    .skill__title= options.title || ''
     .skill__level
       while i < 12
-        .skill__level-item(class= i++ < value ? 'skill__level-item_enable' : 'skill__level-item_disable')
+        .skill__level-item(class= i++ < options.value ? 'skill__level-item_enable' : 'skill__level-item_disable')
